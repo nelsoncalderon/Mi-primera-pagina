@@ -1,0 +1,117 @@
+#botonmenu {
+    display: none;
+}
+
+header label {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 6px;
+}
+
+.menu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background: black;
+    transition: all 0.5s;
+    transform: translateX(-100%);
+    
+}
+.menu ul{
+    list-style: none;
+}
+
+.menu a {
+    cursor: pointer;
+    display: block;
+    color: white;
+    height: 50px;
+    padding: 15px;
+    border-bottom: 1px solid  gold;
+    text-decoration: none;
+    font-family: 'Rokkitt', serif;
+}
+
+.menu li ul{
+    display: none;
+    position: absolute;
+    
+    background-color: black;
+}
+
+.menu li ul li{
+    position: relative;
+}
+
+.menu li:hover > ul{
+    display: block;
+    }
+
+    .submenu a {
+        cursor: pointer;
+        display: block;
+        color: white;
+        height: 50px;
+        padding: 15px;
+        border-bottom: 1px solid  gold;
+        text-decoration: none;
+        font-family: 'Rokkitt', serif;
+    }
+
+.menu a:hover {
+    background-color: gold;
+   
+}
+#botonmenu:checked ~ .menu{
+   transform: translateY(0);
+}
+@media(min-width:1024px){
+    .menu {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        transform: translateX(0%);
+        border: none;
+    }
+    .menu a {
+        cursor: pointer;
+       
+        border: none;
+    }
+    .menu li{
+     border: none;
+     float: left;
+}
+.menu li ul{
+    display: none;
+    position: absolute;
+    min-width: 140px;
+    background-color: black;
+}
+
+.menu li:hover > ul{
+display: block;
+}
+
+.menu li ul li{
+    position: relative;
+
+}
+
+.menu li ul li ul{
+    right: -140;
+    top: 0px;
+}
+
+.submenu li{
+         float: none;
+}
+
+
+    header label{
+        display: none;
+    }
+}
